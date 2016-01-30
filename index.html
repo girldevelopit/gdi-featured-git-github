@@ -329,7 +329,7 @@ git checkout hello_world.txt
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -am "Changing and committing some lines"
+git commit -m "Changing and committing some lines"
 git log --pretty=oneline
 git revert [HASH]
               </code></pre>
@@ -351,12 +351,12 @@ git reset my_new_file.txt
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
 git add my_other_file.txt
-git commit -am "Add new file"
+git commit -m "Add new file"
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
 git rm my_other_file.txt
-git commit -am "Remove file"
+git commit -m "Remove file"
             </code></pre>
           </section>
         </section>
@@ -372,14 +372,14 @@ git commit -am "Remove file"
           </section>
           <section>
             <h3>Branching</h3>
-            <p>Create a new branch called version2</p>
+            <p>Create a new branch called new-feature</p>
             <pre><code contenteditable class ="command-line">
-git checkout -b version2
+git checkout -b new-feature
             </code></pre>
             <p>Add new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -m "Adding changes to version 2"
+git commit -m "Adding changes for new feature"
             </code></pre>
           </section>
           <section>
@@ -393,9 +393,9 @@ git branch
             <pre><code contenteditable class ="command-line">
 git checkout master
             </code></pre>            
-            <p>Switch to version2 and look at hello_world.txt</p>
+            <p>Switch to new-feature and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+git checkout new-feature
             </code></pre>
           </section>
         </section>
@@ -407,7 +407,7 @@ git checkout version2
             <p>Switch to master and merge changes</p>
             <pre><code contenteditable class ="command-line">
 git checkout master
-git merge version2
+git merge new-feature
             </code></pre>
             <p>*rebase is another option, but will not be covered in this workshop</p>
           </section>
@@ -419,18 +419,18 @@ git merge version2
 git add hello_world.txt
 git commit -m "Changing first line in master"
             </code></pre>
-            <p>Change first line in hello_world.txt in version2 branch</p>
+            <p>Change first line in hello_world.txt in new-feature branch</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+git checkout new-feature
 # open hello_world.txt and change first line
 git add hello_world.txt
-git commit -m "Changing first line in version2"
+git commit -m "Changing first line in new feature"
             </code></pre>
           </section>
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts, cont.</h4>
-            <p>Merge from master into version2</p>
+            <p>Merge from master into new-feature</p>
             <pre><code contenteditable class ="command-line">
 git merge master
             </code></pre>
