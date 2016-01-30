@@ -324,7 +324,7 @@ git checkout hello_world.txt
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4> 
+            <h4>Undoing committed changes</h4> 
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
@@ -351,10 +351,12 @@ git reset my_new_file.txt
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
 git add my_other_file.txt
+git commit -am "Add new file"
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
 git rm my_other_file.txt
+git commit -am "Remove file"
             </code></pre>
           </section>
         </section>
