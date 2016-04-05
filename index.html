@@ -6,7 +6,7 @@
 
 		<title>Intro to Git and Github ~ Girl Develop It</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core Intro to Git and GitHub course. Material based on original material by Kim Moir, Daniel Fischer, Aurelia Moser, Carina C. Zona and Izzy Johnston. 
+		<meta name="description" content="This is the official Girl Develop It Core Intro to Git and GitHub course. Material based on original material by Kim Moir, Daniel Fischer, Aurelia Moser, Carina C. Zona and Izzy Johnston.
 
     The course is meant to be taught in a two-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 		<meta name="author" content="Girl Develop It">
@@ -22,7 +22,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -41,7 +41,7 @@
           <img src = "images/gdi_logo_badge.png">
           <h3>Intro to Git and Github</h3>
         </section>
-        
+
         <!-- Welcome-->
         <section>
           <h3>Welcome!</h3>
@@ -56,7 +56,7 @@
           </ul>
           </div>
         </section>
-        
+
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
@@ -68,7 +68,7 @@
           </ul>
           </div>
         </section>
-        
+
         <section>
           <h3>What we will cover today</h3>
           <ul>
@@ -77,7 +77,7 @@
             <li class ="fragment">"Gitting" social with GitHub</li>
           </ul>
         </section>
-        
+
         <!-- Version control-->
         <section>
           <section>
@@ -125,11 +125,12 @@
           </section>
           <section>
             <h3>Version Control Distribution</h3>
-            <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-share-2012.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
+            <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010 vs 2013"><img src = "images/2013_vc_market_share.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
           </section>
-           <section>
-              <h3>Version Control Distribution Change</h3>
-              <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-change-2010-2012.png" alt ="Version control distribution share between 2010 and 2012 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
+
+          <section>
+            <h3>Version Control Change</h3>
+            <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010 vs 2013"><img src = "images/2013_change_in_vc_popularity.png" alt ="Version control popularity change between 2010 and 2013 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
             </section>
         </section>
         <!-- Git-->
@@ -256,7 +257,7 @@ $ git config --list
               <li class="fragment">When we <span class ="green">add</span> a new file, we tell Git to add the file to the repository to be tracked</li>
               <li class="fragment">When we <span class ="green">stage</span> an existing file (also with the keyword 'add'), we are telling Git to track the current state of our file</li>
               <li class="fragment">A <span class ="green">commit</span> saves changes made to a file, not the file as a whole. The commit will have a 'hash' so we can track which changes were committed when and by whom.</li>
-            
+
             </ul>
           </section>
           <section>
@@ -284,7 +285,7 @@ $ git config --list
         <section>
           <section>
             <h3>Nobody's Perfect</h3>
-            <h4>Undoing local changes</h4> 
+            <h4>Undoing local changes</h4>
             <p>If you haven't committed yet</p>
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
@@ -297,7 +298,7 @@ $ git config --list
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4> 
+            <h4>Undoing staged changes</h4>
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
@@ -310,7 +311,7 @@ git checkout hello_world.txt
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4> 
+            <h4>Undoing staged changes</h4>
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
@@ -376,7 +377,7 @@ git branch
             <p>Switch to master and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git checkout master
-            </code></pre>            
+            </code></pre>
             <p>Switch to version2 and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git checkout version2
@@ -419,7 +420,7 @@ git commit -m "Changing first line in version2"
 git merge master
             </code></pre>
             <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
-                       
+
           </section>
         </section>
         <!-- GitHub-->
