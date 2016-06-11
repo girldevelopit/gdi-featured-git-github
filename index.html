@@ -399,7 +399,7 @@ git merge master
           <h3>GitHub</h3>
           <h4>Get Local Repository of GitHub Repo</h4>
           <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
+cd ../
 mkdir hello-world
 cd hello-world
 git init
@@ -421,15 +421,17 @@ git push origin master
         <section>
           <h3>GitHub</h3>
           <h4>Pulling from remote repository</h4>
-          <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
+          <p>If you're working with a team, make sure that you have everyone's changes before pushing your own changes.</p>
+          <ul>
+            <li>Commit local changes</li>
+            <li>Pull changes other people have made</li>
+            <li>Fix any conflicts and commit</li>
+            <li>Push local changes to GitHub</li>
+          </ul>
           <pre><code contenteditable class ="command-line">
-# Commit local changes
 git commit -m "My latest commit"
-# Pull changes other people have made
 git pull origin master
-# Fix any conflicts (see merge conflicts above) and commit
 git commit -m "Fixing merging conflicts"
-# push local changes to GitHub
 git push origin master
           </code></pre>
         </section>
