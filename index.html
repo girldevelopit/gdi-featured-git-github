@@ -344,7 +344,7 @@ git checkout new-feature
 git checkout master
 git merge new-feature
           </code></pre>
-          <p>*rebase is another option, but will not be covered in this workshop</p>
+          <p>Rebase is another option, but will not be covered in this workshop</p>
         </section>
         <section>
           <h3>Merging</h3>
@@ -400,10 +400,10 @@ git merge master
           <h4>Get Local Repository of GitHub Repo</h4>
           <pre><code contenteditable class ="command-line">
 cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
+mkdir hello-world
+cd hello-world
 git init
-git remote add origin git@github.com:username/NAME-OF-REPO
+git remote add origin https://github.com/USERNAME/hello-world.git
 git pull origin master
           </code></pre>
         </section>
@@ -442,26 +442,8 @@ git push origin master
           </ul>
         </section>
         <section>
-          <h3>Forking</h3>
-          <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
-        </section>
-        <section>
-          <h3>Forking</h3>
-          <h4>Cloning</h4>
-          <p>Clone to get a local repository of your fork
-          <pre><code contenteditable class ="command-line">
-cd ../
-
-git clone git@github.com:username/FORKED-REPO-NAME.git
-
-cd FORKED-REPO-NAME
-
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# Assigns the original repository to a remote called "upstream"
-
-git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
-          </code></pre>
+          <h3>GitHub</h3>
+          <a href="https://help.github.com/articles/fork-a-repo/">Fork a repository on GitHub</a>
         </section>
         <!-- Pull requests-->
         <section>
@@ -473,12 +455,8 @@ git fetch upstream
           </ul>
         </section>
         <section>
-          <h3>Starting a pull request</h3>
-          <img src = "images/click-pull-request.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
-        </section>
-        <section>
-          <h3>Previewing  and sending pull request</h3>
-          <img src = "images/pull-request.png" alt ="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
+          <h3>GitHub</h3>
+          <a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request on GitHub</a>
         </section>
         <section>
           <h3>Managing pull requests</h3>
