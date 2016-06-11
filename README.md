@@ -1,6 +1,6 @@
 # CORE INTRO TO GIT AND GITHUB
 
-Slides and materials are hosted at [http://girldevelopit.github.io/gdi-core-git-github/](http://girldevelopit.github.io/gdi-core-git-github/).
+Slides and materials are hosted at [http://melissa.holmes.io/gdi-core-git-github/#/](http://melissa.holmes.io/gdi-core-git-github/).
 
 ## Course description
 
