@@ -36,9 +36,6 @@
 		}
 	</script>
 
-	<!-- If use the PDF print sheet so students can print slides-->
-
-	<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -118,7 +115,7 @@ ResumeREALLYREALLYNEW.docx
 					</code></pre>
 				<div class="fragment">
 					<p>You invented your own version control!</p>
-					<p>But, we can do it better with Version Control tools</p>
+					<p>But, we can do it <span class="green">so much</span> better with Version Control tools</p>
 				</div>
 			</section>
 
@@ -146,7 +143,7 @@ Initial revision of "git", the information manager from hell
 				<h3>Version Control Types</h3>
 				<br>
 				<h4>Centralized Version Control</h4>
-				<p>Examples: CVS, Subversion (SVN)</p>
+				<p>Examples: CVS, SVN</p>
 				<br/>
 				<h4>Distributed Version Control</h4>
 				<p>Examples: Git, Mercurial</p>
@@ -237,30 +234,32 @@ $ cd my-repo
 $ git init
 $ git status
 						</code></pre>
+				<p><small><a href="https://help.github.com/articles/about-readmes/" target="_blank">More about README.md</a></small></p>
+				<aside class="notes">Acceptable tangent: READMEs</aside>
 			</section>
 			<section>
 				<h3>Add Files</h3>
-				<p>Create a <code>readme.md</code> file in your new folder</p>
+				<p>Create a <code>README.md</code> file in your new folder</p>
 				<p>Check repo status</p>
 				<pre><code contenteditable class ="bash">
 $ git status
 						</code></pre>
 				<p>Tell Git to track our new file</p>
 				<pre><code contenteditable class="bash">
-$ git add readme.md
+$ git add README.md
 $ git status
 						</code></pre>
 				<p>File is now tracked by Git</p>
 			</section>
 			<section>
 				<h3>Changes and Commits</h3>
-				<p>Open <code>readme.md</code> and add some more text</p>
+				<p>Open <code>README.md</code> and add some more text</p>
 				<pre><code contenteditable class="bash">
 $ git status
 						</code></pre>
 				<p>Stage and commit the change</p>
 				<pre><code contenteditable class="bash">
-$ git add readme.md
+$ git add README.md
 $ git commit -m "First commit. Added README to repository."
 						</code></pre>
 				<p>A <a href="https://alistapart.com/article/the-art-of-the-commit" target="_blank">good commit message</a> acts like a headline to a newspaper article (but not clickbait!)</p>
@@ -295,13 +294,12 @@ $ git log
 			<section>
 				<h2>Let's Try It!</h2>
 				<ul>
-					<li>Make changes to <code>readme.md</code> and make some more commits.</li>
+					<li>Make changes to <code>README.md</code> and make some more commits.</li>
 					<li>Add another file (or image!) to your project and commit that.</li>
 					<li>Change more than one file at a time, and practice making commits where you stage only one file, or both files together.</li>
 				</ul>
-				<h4 style="margin-top: 30px;"> Don't forget to run <span class="green">git status</span> regularly so that you can see what is happening at each stage!</h4>
+				<h4 style="margin-top: 30px;"> Don't forget to run <code class="green">git status</code> regularly so that you can see what is happening at each stage!</h4>
 			</section>
-
 
 			<!-- Undoing changes -->
 			<section>
@@ -309,12 +307,12 @@ $ git log
 				<h4>Undoing local changes</h4>
 				<p>If you haven't staged/committed yet</p>
 				<div class="fragment">
-					<p>Open <code>readme.md</code> and make some changes to the file.</p>
+					<p>Open <code>README.md</code> and make some changes to the file.</p>
 					<pre><code contenteditable class="bash">
-$ git checkout readme.md
+$ git checkout README.md
 							</code></pre>
 				</div>
-				<p class="fragment">Look at <code>readme.md</code>. Your changes are gone. You've gone back to the previous commit state.</p>
+				<p class="fragment">Look at <code>README.md</code>. Your changes are gone. You've gone back to the previous commit state.</p>
 			</section>
 
 			<section>
@@ -332,15 +330,15 @@ $ git reset my_new_file.txt
 				<h3>Nobody's Perfect</h3>
 				<h4>Undoing staged changes</h4>
 				<div class="fragment">
-					<p>Open <code>readme.md</code> and add some new text</p>
+					<p>Open <code>README.md</code> and add some new text</p>
 					<pre><code contenteditable class="bash">
-$ git add readme.md
-$ git reset HEAD readme.md
+$ git add README.md
+$ git reset HEAD README.md
 $ git status ## your changes were unstaged
-$ git checkout readme.md
+$ git checkout README.md
 							</code></pre>
 				</div>
-				<p class="fragment">Look at <code>readme.md</code>. Your changes are gone and the file is removed from staging.</p>
+				<p class="fragment">Look at <code>README.md</code>. Your changes are gone and the file is removed from staging.</p>
 			</section>
 
 			<section>
@@ -348,9 +346,9 @@ $ git checkout readme.md
 				<h4>Undoing committed changes</h4>
 				<p>Git lets you go back to any previous commit.</p>
 				<div class="fragment">
-					<p>Open <code>readme.md</code> and add some new text</p>
+					<p>Open <code>README.md</code> and add some new text</p>
 					<pre><code class="bash">
-$ git add readme.md
+$ git add README.md
 $ git status
 $ git commit -m "Make a change I will soon regret making"
 $ git log --oneline
@@ -404,9 +402,9 @@ $ git log --oneline
 				<pre><code contenteditable class="bash">
 $ git checkout -b my-feature
 						</code></pre>
-				<p>Add new lines to <code>readme.md</code></p>
+				<p>Add new lines to <code>README.md</code></p>
 				<pre><code contenteditable class="bash">
-$ git add readme.md
+$ git add README.md
 $ git commit -m "Adding changes to my-feature"
 						</code></pre>
 				<aside class="notes">This is a good time to talk about naming best practices</aside>
@@ -418,11 +416,11 @@ $ git commit -m "Adding changes to my-feature"
 				<pre><code contenteditable class="bash">
 $ git branch
 						</code></pre>
-				<p>Switch to <code>master</code> and look at <code>readme.md</code></p>
+				<p>Switch to <code>master</code> and look at <code>README.md</code></p>
 				<pre><code contenteditable class="bash">
 $ git checkout master
 						</code></pre>
-				<p>Switch to <code>my-feature</code> and look at <code>readme.md</code></p>
+				<p>Switch to <code>my-feature</code> and look at <code>README.md</code></p>
 				<pre><code contenteditable class="bash">
 $ git checkout my-feature
 						</code></pre>
@@ -447,16 +445,16 @@ $ git log --oneline
 			<section>
 				<h3>Merging</h3>
 				<h4>Merge Conflicts</h4>
-				<p>Change first line in <code>readme.md</code> in <code>master</code> branch</p>
+				<p>Change first line in <code>README.md</code> in <code>master</code> branch</p>
 				<pre><code contenteditable class="bash">
-$ git add readme.md
+$ git add README.md
 $ git commit -m "Changing first line in master"
 						</code></pre>
-				<p>Change first line in <code>readme.md</code> in <code>my-feature</code> branch</p>
+				<p>Change first line in <code>README.md</code> in <code>my-feature</code> branch</p>
 				<pre><code contenteditable class="bash">
 $ git checkout my-feature
-# open readme.md and change first line
-$ git add readme.md
+# open README.md and change first line
+$ git add README.md
 $ git commit -m "Changing first line in my-feature"
 						</code></pre>
 			</section>
@@ -497,6 +495,7 @@ $ git merge master
 				<h3>GitHub</h3>
 				<h4><a href="https://help.github.com/articles/create-a-repo/">Create your first repository</a></h4>
 				<img src="images/new-repo-screen-gdibtv.png" alt="" />
+				<aside class="notes">Recommend that they name this the same as their local repo</aside>
 			</section>
 
 			<section>
@@ -511,7 +510,7 @@ $ git push -u origin master
 # that -u is an option that signals that you are setting
 # a tracking reference to the remote branch as the default;
 # you only need to use this flag the first time
-            </code></pre>
+				</code></pre>
 				<p class="fragment">Now check out your GitHub repo online!</p>
 			</section>
 
@@ -522,111 +521,148 @@ $ git push -u origin master
 				<img src="images/basic-remote-workflow.png" style="height:550px;" />
 			</section>
 
-
-			<!-- Using GitHub as origin -->
+			<!-- Push and Pull -->
 			<section>
 				<h3>GitHub</h3>
-				<h4>Get Local Repository of GitHub Repo</h4>
-				<pre><code contenteditable class="bash">
-$ cd ../ # Back in root directory
-$ mkdir hello-github
-$ cd hello-github
-$ git init
-$ git remote add origin git@github.com:username/NAME-OF-REPO
-$ git pull origin master
-						</code></pre>
-			</section>
-			<section>
-				<h3>GitHub</h3>
-				<h4>Push to GitHub Repo</h4>
-				<p>Edit the ReadMe file
+				<h4>Push to Repo on GitHub</h4>
+				<p>Edit <code>README.md</code>
 					<pre><code contenteditable class="bash">
-$ git add README
+$ git add README.md
 $ git commit -m "Updating readme file"
 $ git push origin master
 						</code></pre>
-					<p class="fragment">Go look at your github repo online</p>
+					<p class="fragment">Now check out your GitHub repo online!</p>
 			</section>
+
 			<section>
-				<h3>GitHub</h3>
-				<h4>Pulling from remote repository</h4>
-				<p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
-				<pre><code contenteditable class="bash">
-# Commit local changes
-$ git commit -m "My latest commit"
-# Pull changes other people have made
-$ git pull origin master
-# Fix any conflicts (see merge conflicts above) and commit
-$ git commit -m "Fixing merging conflicts"
-# push local changes to GitHub
-$ git push origin master
-						</code></pre>
+				<h3>Shared Repos</h3>
+				<p>If team members are contributing to a single repo, each member of the team will want to make sure that she has everyone else's changes before pushing her own changes to the remote repository.</p>
+				<div class="fragment">
+					<p class="green">Always pull before you push!</p>
+				</div>
 			</section>
+
+			<section>
+				<h3>Pulling</h3>
+				<p>Commit local changes first</p>
+				<pre><code class ="command-line">
+$ git commit -m "My latest commit"
+				</code></pre>
+				<p>Get changes that have been pushed</p>
+				<pre><code class ="command-line">
+$ git pull origin master
+				</code></pre>
+				<p>Git may prompt you to fix any conflicts, then commit</p>
+				<pre><code class ="command-line">
+$ git commit -m "Fixing merging conflicts"
+				</code></pre>
+				<p>Now you are ready to push local changes to GitHub</p>
+				<pre><code class ="command-line">
+$ git push origin master
+				</code></pre>
 			</section>
 
 
 			<!-- Fork a repository-->
 			<section>
-				<section>
-					<h3>Forking</h3>
-					<ul>
-						<li>There are <span class="green">MILLIONS</span> of public repositories on GitHub</li>
-						<li>If you want to <span class="green">use</span> or <span class="green">contribute</span> to a repository, you can fork it.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Forking</h3>
-					<img src="images/bootcamp_3_fork.jpg" alt="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo" />
-				</section>
-				<section>
-					<h3>Forking</h3>
-					<h4>Cloning</h4>
-					<p>Clone to get a local repository of your fork
-						<pre><code contenteditable class="bash">
+				<h3>Forking</h3>
+				<p>There are <span class="green">MILLIONS</span> of public repositories on GitHub.</p>
+				<p>There are huge open source projects (<a href="https://github.com/git/git" target="_blank">including Git!</a>)…</p>
+				<p>…and small projects like these slides.</p><br>
+				<h4>Collaborating</h4>
+				<p>If you want to use or contribute to a repository, you have to <span class="green">fork</span> the repository, then <span class="green">clone</span> it to your computer.</p>
+				<p>A fork is just a copy of a repository, saved to GitHub.</p>
+			</section>
+			<section>
+				<h3>Forking</h3>
+				<img src="images/fork-gdi.png" alt="How to fork a repository." />
+				<p>After you fork the repository, it shows up in your repositories.</p>
+				<img src="images/fork-gdi-btv.png" alt="A forked repository." />
+				<p>Let's Try It! <a href="https://github.com/GDIBTV/git-resources">Fork this repo.</a></p>
+				<p><small>You can only fork repos through the GitHub website.</small></p>
+			</section>
+			<section>
+				<h3>Cloning</h3>
+				<p>To get a local copy of the fork you just made, use the <code class="green">git clone</code> command.</p>
+				<pre><code class ="command-line">
 $ cd ../
 
-$ git clone https://github.com/username/FORKED-REPO-NAME.git
+$ git clone https://github.com/USERNAME/git-resources.git
 
-$ cd FORKED-REPO-NAME
-
-$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# Assigns the original repository to a remote called "upstream"
-
-$ git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
-						</code></pre>
-				</section>
+$ cd git-resources
+$ git remote -v
+				</code></pre>
 			</section>
+			<section>
+				<h3>Girl Developer <br>and the Three Repositories</h3>
+				<div class="fragment">
+					There are now THREE copies of this repo that you have access to.
+				</div>
+				<img src="images/three_kittens.jpg" class="fragment" style="max-height:200px;">
+				<br>
+				<div class="fragment">
+					the original (on Github)* => <span class="green">upstream</span>
+				</div>
+				<div class="fragment">
+					your fork (on GitHub) => <span class="green">origin</span>
+				</div>
+				<div class="fragment">
+					your clone => <span class="green">your local repo</span>, just like you're used to
+				</div>
+				<aside class="notes">* well, you can pull changes from this repo, you may not be able to modify it</aside>
+			</section>
+			<section>
+				<h3>Connect to the Original</h3>
+				<p>To sync your fork with the original repo, you need to add another remote named <code>upstream</code></p>
+				<pre style="width: 100%;"><code>
+$ git remote -v
+$ git remote add upstream https://github.com/GDIBTV/git-resources.git
+$ git fetch upstream
+				</code></pre>
+				<p><code class="green">git fetch</code> downloads Git references not present in your local repository, but does not modify your files (think of it like getting a table of contents rather than the contents themselves)</p>
+
+			</section>
+
 			<!-- Pull requests-->
 			<section>
-				<section>
-					<h3>Pull Requests</h3>
-					<ul>
-						<li class="fragment">After you fork and clone a repository all pushed changes will go to your fork</li>
-						<li class="fragment">These changes will not affect the original repository</li>
-						<li class="fragment">If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Starting a pull request</h3>
-					<img src="images/click-pull-request.png" alt="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests" />
-				</section>
-				<section>
-					<h3>Previewing and sending pull request</h3>
-					<img src="images/pull-request.png" alt="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests" />
-				</section>
-				<section>
-					<h3>Managing pull requests</h3>
-					<p>How to manage pull requests is out of the scope of this short workshop, but you can learn more from the <a href="https://help.github.com/categories/63/articles" target="_blank" alt="Links to tutorials on pull requests and collaboration">Github Collaborating Tutorials</a>
-				</section>
+				<h3>Pull Requests</h3>
+				<p class="fragment">After you <code>fork</code> and <code>clone</code> a repository all pushed changes will go to your fork (<code>origin</code>)</p>
+				<p class="fragment">These changes do not affect the original (<code>upstream</code>) repository (mostly because permissions). To do that, you need to submit a pull request.</p>
+				<p class="fragment">A <span class="green">pull request</span> is a GitHub feature that lets you ask the owner of the upstream repo to pull your changes in.</p>
+			</section>
+			<section>
+				<h3>Starting a Pull Request</h3>
+				<img src="images/click-pull-request.png" alt="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests" />
+				<p>Pull requests can only be done through the GitHub website.</p>
+			</section>
+			<section>
+				<h3>Opening Pull Requests</h3>
+				<img src="images/pull-request-review-page.png" alt="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests" />
+				<aside class="notes">Acceptable tangent: style guides and contribution outlines</aside>
+			</section>
+			<section>
+				<h3>Managing Pull Requests</h3>
+				<p>Repo owners review and decide whether to merge in the pull requests they receive.</p>
+				<p>You can learn more from the <br><a href="https://help.github.com/categories/63/articles" target="_blank" alt="Links to tutorials on pull requests and collaboration">Github Collaborating Tutorials</a>
+			</section>
+
+			<!-- Develop It -->
+			<section>
+				<h2>Let's Try It!</h2>
+				<ul>
+					<li>Make changes to the <code>git-resources</code> repository and push to your remote.</li>
+					<li>Submit a pull request to the original repository.</li>
+					<li>Explore other repos on GitHub and get excited about the world that is now open to you!</li>
+				</ul>
 			</section>
 
 			<!-- The End -->
 			<section>
-				<h2>Questions?</h2>
-				<div style="font-size:1200%; height:100%; margin-top:20%" class="blue">?
-					<div class="clear"></div>
-				</div>
+				<h2>Thank You!</h2>
+
+				<p>Keep in touch!</p>
+				<p><a href="mailto:rachaela@girldevelopit.com">rachaela@girldevelopit.com</a></p>
+				<p><a href="http://www.raearnold.com/">raearnold.com</a></p>
 			</section>
 		</div>
 		<footer>
