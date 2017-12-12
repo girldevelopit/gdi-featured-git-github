@@ -4,6 +4,7 @@ This is the official Girl Develop It Core Intro to Git and Github course, forked
 The course is meant to be taught in a two-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
 You can checkout the slides here:
+[https://gdi-orlando.github.io/intro-to-python/](https://gdi-orlando.github.io/intro-to-python/)
 
 ## Theme customization
 
