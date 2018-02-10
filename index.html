@@ -229,13 +229,13 @@ $ git config --list
             </code></pre>
             <p>Create a "working directory"</p>
             <pre><code contenteditable class ="command-line">
-  mkdir my-first-repo
-  cd my-first-repo
+  $ mkdir my-first-repo
+  $ cd my-first-repo
             </code></pre>
             <p>Initialize repository with Git</p>
             <pre><code contenteditable class ="command-line">
-  git init
-  git status
+  $ git init
+  $ git status
             </code></pre>
           </section>
           <section>
@@ -243,13 +243,13 @@ $ git config --list
             <p>Create a new hello_world.txt file in your new folder</p>
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
-  git status
-  touch hello_world.txt
+  $ git status
+  $ touch hello_world.txt
             </code></pre>
             <p>Tell Git to track our new file</p>
             <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git status
+  $ git add hello_world.txt
+  $ git status
             </code></pre>
             <p>File is now tracked by Git</p>
           </section>
@@ -257,7 +257,7 @@ $ git config --list
             <h3>Changes and commits</h3>
             <p>Open hello_world.txt and add some more text</p>
             <pre><code contenteditable class ="command-line">
-  git status
+  $ git status
   # Open hello_world.txt in your favorite editor and type "Hello!"
             </code></pre>
             <p>Stage and commit the change</p>
@@ -345,11 +345,12 @@ $ git reset my_new_file.txt
             <h4>Delete a file</h4>
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
-git add my_other_file.txt
+$ touch my_other_file.txt
+$ git add my_other_file.txt
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
-git rm my_other_file.txt
+$ git rm my_other_file.txt
             </code></pre>
           </section>
         </section>
@@ -367,12 +368,12 @@ git rm my_other_file.txt
             <h3>Branching</h3>
             <p>Create a new branch called version2</p>
             <pre><code contenteditable class ="command-line">
-git checkout -b version2
+$ git checkout -b version2
             </code></pre>
             <p>Add new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Adding changes to version 2"
+$ git add hello_world.txt
+$ git commit -m "Adding changes to version 2"
             </code></pre>
           </section>
           <section>
@@ -380,15 +381,15 @@ git commit -m "Adding changes to version 2"
             <h4>Switching branches</h4>
             <p>See all branches. Branch with * is active</p>
             <pre><code contenteditable class ="command-line">
-git branch
+$ git branch
             </code></pre>
             <p>Switch to master and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git checkout master
+$ git checkout master
             </code></pre>
             <p>Switch to version2 and look at hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+$ git checkout version2
             </code></pre>
           </section>
         </section>
@@ -399,8 +400,8 @@ git checkout version2
             <h4>Merge to get changes from one branch into another*</h4>
             <p>Switch to master and merge changes</p>
             <pre><code contenteditable class ="command-line">
-git checkout master
-git merge version2
+$ git checkout master
+$ git merge version2
             </code></pre>
             <p>*rebase is another option, but will not be covered in this workshop</p>
           </section>
@@ -409,15 +410,15 @@ git merge version2
             <h4>Merge conflicts</h4>
             <p>Change first line in hello_world.txt in master branch</p>
             <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Changing first line in master"
+$ git add hello_world.txt
+$ git commit -m "Changing first line in master"
             </code></pre>
             <p>Change first line in hello_world.txt in version2 branch</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+$ git checkout version2
 # open hello_world.txt and change first line
-git add hello_world.txt
-git commit -m "Changing first line in version2"
+$ git add hello_world.txt
+$ git commit -m "Changing first line in version2"
             </code></pre>
           </section>
           <section>
@@ -425,7 +426,7 @@ git commit -m "Changing first line in version2"
             <h4>Merge conflicts, cont.</h4>
             <p>Merge from master into version2</p>
             <pre><code contenteditable class ="command-line">
-git merge master
+$ git merge master
             </code></pre>
             <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
 
