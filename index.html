@@ -469,12 +469,12 @@ $ git merge master
             <h3>GitHub</h3>
             <h4>Get Local Repository of GitHub Repo</h4>
             <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
+$ cd ../ # Back in root directory
+$ mkdir hello-github
+$ cd hello-github
+$ git init
+$ git remote add origin https://github.com/NAME-OF-REPO.git
+$ git pull origin master
             </code></pre>
           </section>
           <section>
@@ -482,9 +482,10 @@ git pull origin master
             <h4>Push to GitHub Repo</h4>
             <p>Edit the ReadMe file
             <pre><code contenteditable class ="command-line">
-git add README
-git commit -m "Updating readme file"
-git push origin master
+$ touch README.md 
+$ git add .
+$ git commit -m "Adding readme file"
+$ git push -u origin master
             </code></pre>
             <p class ="fragment">Go look at your github repo online</p>
           </section>
