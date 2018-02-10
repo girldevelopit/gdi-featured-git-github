@@ -191,8 +191,10 @@
           <section>
             <h3>Installation and Setup</h3>
             <p>Copy SSH Key to Clipboard</p>
+            <pre><code contenteditable class="command-line">$ pbcopy < ~/.ssh/id_rsa.pub</code></pre>
             <pre>
-              <code contenteditable class="command-line">$ pbcopy < ~/.ssh/id_rsa.pub</code></pre>
+              <code contenteditable class="command-line"> # This code will copy your SSH key into your clipboard.</code>  
+            </pre>
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -242,6 +244,7 @@ $ git config --list
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
   git status
+  touch hello_world.txt
             </code></pre>
             <p>Tell Git to track our new file</p>
             <pre><code contenteditable class ="command-line">
