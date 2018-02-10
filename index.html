@@ -152,32 +152,41 @@
               <p>Install git</p>
               <img src = "images/install-git.png" alt = "Download latest version of Git"/>
             </a>
+            <p>Alternatively, if you're using a Mac you can use:</p>
+              <code>brew install git</code>
           </section>
           <section>
             <h3>Installation and Setup</h3>
             <p>Setup ssh keys</p>
-            <pre><code contenteditable class ="command-line">
-             $ cd ~/.ssh
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
-$ ssh-keygen -t rsa -C "your_email@example.com"
+            <pre><code contenteditable class="command-line">$ cd ~/.ssh</code></pre>
+            <pre>
+              <code contenteditable class ="command-line">$ ssh-keygen -t rsa -C "your_email@example.com"
 # Generating public/private rsa key pair.
-# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
-Enter passphrase (empty for no passphrase): [Type a passphrase]
-# Enter same passphrase again: [Type passphrase again]
-            </code></pre>
+# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]</code></pre>
+            <pre>
+              <code contenteditable class="command-line"># Enter passphrase (empty for no passphrase): [Type a passphrase]
+# Enter same passphrase again: [Type passphrase again]</code></pre>
           </section>
           <section>
             <h3>Installation and Setup</h3>
             <p>Get SSH Key</p>
-            <pre><code contenteditable class ="command-line">
-Your identification has been saved in /Users/you/.ssh/id_rsa.
+            <pre>
+              <code contenteditable class ="command-line"># Your identification has been saved in /Users/you/.ssh/id_rsa.
 # Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-            </code></pre>
+# The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|         .       |
+|        E .      |
+|   .   . o       |
+|  o . . S .      |
+| + + o . +       |
+|. + o = o +      |
+| o...o * o       |
+|.  oo.o .        |
++-----------------+</code></pre>
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -305,20 +314,6 @@ $ git config --list
 git add hello_world.txt
 git reset HEAD hello_world.txt
 git checkout hello_world.txt
-              </code></pre>
-            </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-          </section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4>
-            <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
-              <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -am "Changing and committing some lines"
-git log --pretty=oneline
-git revert [HASH]
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
