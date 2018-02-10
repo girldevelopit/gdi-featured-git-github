@@ -223,9 +223,9 @@ $ git config --list
             <h3>Your first Local Repository</h3>
             <p>Go to home directory</p>
             <pre><code contenteditable class ="command-line">
-  cd ~/
+  $ cd ~/
   OR
-  cd Users\username
+  $ cd Users\username
             </code></pre>
             <p>Create a "working directory"</p>
             <pre><code contenteditable class ="command-line">
@@ -258,12 +258,12 @@ $ git config --list
             <p>Open hello_world.txt and add some more text</p>
             <pre><code contenteditable class ="command-line">
   git status
-  # Open your hello_world.txt file in your favorite editor and type "Hello, world!"
+  # Open hello_world.txt in your favorite editor and type "Hello!"
             </code></pre>
             <p>Stage and commit the change</p>
             <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git commit -m "First commit. Added hello world to repository."
+  $ git add hello_world.txt
+  $ git commit -m "First commit. Added hello world to repository."
             </code></pre>
           </section>
         </section>
@@ -282,7 +282,7 @@ $ git config --list
           <section>
             <h3>Look at our progress</h3>
             <pre><code contenteditable class ="command-line">
-  git log
+  $ git log
             </code></pre>
             <pre><code contenteditable class ="command-line">
   commit [HASH HERE]
@@ -295,7 +295,9 @@ $ git config --list
           <section>
             <h3>Look at our progress, visually</h3>
             <pre><code contenteditable class ="command-line">
-  gitk
+  $ gitk
+  # OR
+  $ git-gui
             </code></pre>
             <img src = "images/gitk.png" alt ="Image of commits for this curriculum repo"/>
           </section>
@@ -309,8 +311,8 @@ $ git config --list
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-  change hello_world.txt
-  git checkout hello_world.txt
+  # change hello_world.txt
+  $ git checkout hello_world.txt
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
@@ -321,9 +323,9 @@ $ git config --list
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git reset HEAD hello_world.txt
-git checkout hello_world.txt
+$ git add hello_world.txt
+$ git reset HEAD hello_world.txt
+$ git checkout hello_world.txt
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
@@ -333,8 +335,9 @@ git checkout hello_world.txt
             <h4>Remove a file from staging</h4>
             <p>Create new file my_new_file.txt</p>
               <pre><code contenteditable class ="command-line">
-git add my_new_file.txt
-git reset my_new_file.txt
+$ touch my_new_file.txt               
+$ git add my_new_file.txt
+$ git reset my_new_file.txt
               </code></pre>
           </section>
           <section>
