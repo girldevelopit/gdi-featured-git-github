@@ -152,7 +152,7 @@
               <p>Install git</p>
               <img src = "images/install-git.png" alt = "Download latest version of Git"/>
             </a>
-            <p>Alternatively, if you're using a Mac you can use:</p>
+            <p>Alternatively, if you're using a Mac you can use <a href="https://brew.sh/">Homebrew</a></p>
               <code>brew install git</code>
           </section>
           <section>
@@ -192,9 +192,7 @@
             <h3>Installation and Setup</h3>
             <p>Copy SSH Key to Clipboard</p>
             <pre><code contenteditable class="command-line">$ pbcopy < ~/.ssh/id_rsa.pub</code></pre>
-            <pre>
-              <code contenteditable class="command-line"> # This code will copy your SSH key into your clipboard.</code>  
-            </pre>
+            <p class="fragment"> This code will copy your SSH key into your clipboard.</p>
           </section>
           <section>
             <h3>Installation and Setup</h3>
@@ -523,16 +521,16 @@ $ git push
             <h4>Cloning</h4>
             <p>Clone to get a local repository of your fork
             <pre><code contenteditable class ="command-line">
-cd ../
+$ cd ../
 
-git clone https://github.com/username/FORKED-REPO-NAME.git
+$ git clone https://github.com/username/FORKED-REPO-NAME.git
 
-cd FORKED-REPO-NAME
+$ cd FORKED-REPO-NAME
 
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
 # Assigns the original repository to a remote called "upstream"
 
-git fetch upstream
+$ git fetch upstream
 # Pulls in changes not present in your local repository, without modifying your files
             </code></pre>
           </section>
