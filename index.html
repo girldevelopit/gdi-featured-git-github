@@ -145,7 +145,7 @@
         <ul>
           <li>Fast -- add to your team and code base quickly</li>
           <li>Distributed (see slide above) </li>
-          <li>Each commit has a corresponding hash (track changes from everyone)</li>
+          <li>Each commit has a corresponding hash (a unique identifier)</li>
           <li>Everyone has a local copy of the history</li>
         </ul>
       </section>
@@ -162,7 +162,7 @@
           <h3>Installation and Setup</h3>
           <p>Setup ssh keys</p>
           <pre><code contenteditable class ="command-line">
-             $ cd ~/.ssh
+$ cd ~/.ssh
             </code></pre>
           <pre><code contenteditable class ="command-line">
 $ ssh-keygen -t rsa -C "your_email@example.com"
@@ -259,13 +259,11 @@ $ git config --list
           <h3>What did we just do??</h3>
           <p>How is this all different than just saving a file?</p>
           <ul>
-            <li class="fragment">When we <span class="green">add</span> a new file, we tell Git to add the file to the repository
-              to be tracked</li>
-            <li class="fragment">When we <span class="green">stage</span> an existing file (also with the keyword 'add'),
+            <li class="fragment">When we create a new file in our Git repository, Git will begin to track that file</li>
+            <li class="fragment">When we <span class="green">stage</span> an existing file using the command <code>git add &lt;file&gt;</code>,
               we are telling Git to track the current state of our file</li>
             <li class="fragment">A <span class="green">commit</span> saves changes made to a file, not the file as a whole.
               The commit will have a 'hash' so we can track which changes were committed when and by whom.</li>
-
           </ul>
         </section>
         <section>
